@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "author": "Annie Prasanna",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -48, "left": -100.76, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": -203.6, "left": -192, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "servo1:V+", "esp:5V", "green", [ "h-28.8", "v0.1" ] ],
+    [ "esp:GND.1", "servo1:GND", "black", [ "h-143.85", "v-259.2" ] ],
+    [ "servo1:PWM", "esp:18", "green", [ "h-9.6", "v57.8", "h240", "v134.4" ] ]
+  ],
+  "serialMonitor": { "collapse": false, "convertEol": false, "display": "always", "newline": "lf" },
+  "dependencies": {}
+}
